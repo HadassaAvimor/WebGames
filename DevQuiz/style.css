@@ -61,6 +61,7 @@ body{
 .if-else,
 .function,
 .brackets,
+.case,
 .init{
     font-family: 'Fira Code', monospace;
 }
@@ -71,6 +72,9 @@ body{
 
 .if-else{
     color: #db78a1;
+}
+.case{
+    color:darkorchid
 }
 
 .function{

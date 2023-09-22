@@ -84,17 +84,28 @@
                 </span>
                 <br>
                 <br>
-                <span class="if-else">if&nbsp;</span><span class="brackets">(</span>
-                <span class="function">programmer<span class="brackets">()</span></span>
+                <span class="if-else">switch&nbsp;</span><span class="brackets">(</span>
+                <span class="function">programmer</span>
                 <span class="brackets">){</span>
-                    <br>
-                <span class="btn">&emsp;&emsp;<button class="start-btn">startQuiz<span class="btn-brackets">()</span><span class="btn-colon">;</span></button></span>
                 <br>
-                <span class="if-else"><span class="brackets">}</span><br>else<span class="brackets">{</span></span>
+                <span class="case">&emsp; case Python:</span>
                 <br>
-                <span class="function read-instruction">&emsp;&emsp;readInstruction<span class="brackets">()</span><span class="colon">;</span></span>
+                <span  id="python-btn">&emsp;&emsp; &emsp;<button class="start-btn">startPythonQuiz<span class="btn-brackets">()</span><span class="btn-colon">;</span></button></span>
                 <br>
-                <span class="brackets">}</span>
+                <span class="function">&emsp; &emsp;&emsp; break;</span>
+                <br>
+                <br>
+                <span class="case">&emsp; case JavaScript:</span>
+                <br>
+                <span  id="js-btn">&emsp;&emsp; &emsp;<button class="start-btn">startJavaScriptQuiz<span class="btn-brackets">()</span><span class="btn-colon">;</span></button></span>
+                <br>
+                <span class="function">&emsp; &emsp;&emsp; break;</span>
+                <br>
+                <br>
+                <span class="case">&emsp;default:</span>
+                <br>
+                <span class="function read-instruction">&emsp;&emsp;&emsp;readInstruction<span class="brackets">()</span><span class="colon">;</span></span>
+                <br>
             </h1>
         </div>
     </div>
