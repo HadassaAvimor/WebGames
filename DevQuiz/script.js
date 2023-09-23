@@ -28,7 +28,6 @@ const questionCountElement = document.querySelector(".question-count");
 const questionsAskedElement = document.querySelector(".questions-asked-array");
 const questionArrayLengthElement = document.querySelector(".questions-array-length");
 let optionPanelPointerEventEnabled = true;
-
 function print(msg)
 {
     console.log(msg);
@@ -87,37 +86,48 @@ const jsQuestionArray = [
   ];
   
   const pythonQuestionArray = [
-    "What does HTML stand for?",
-    "Which of the following is not a JavaScript data type?",
-    "What is the result of 2 + '2' in JavaScript?",
-    "What keyword is used to declare a variable in JavaScript?",
-    "Which built-in method adds one or more elements to the end of an array and returns the new length?",
-    "What does CSS stand for?",
-    "Which operator is used for equality comparison without type coercion in JavaScript?",
-    "What does API stand for?",
-    "What is the purpose of the 'use strict' directive in JavaScript?",
-    "Which function is used to parse a JSON string?",
-    "What is the main purpose of a constructor function in JavaScript?",
-    "Which method is used to remove the last element from an array in JavaScript?",
-    "What is the default behavior of the event.preventDefault() method?",
-    "Which keyword is used to declare a constant variable in JavaScript?",
-    "What is the purpose of a callback function in JavaScript?",
-    "Which global function is used to convert a string to an integer?",
-    "What does the acronym CRUD stand for in the context of databases?",
-    "What is the significance of the 'this' keyword in JavaScript?",
-    "Which method is used to schedule a function to run after a certain delay?",
-    "What is the difference between 'null' and 'undefined' in JavaScript?"
+    "What is Python's coding convention called?",
+    "How memory management is done in Python?",
+    "What is the definition of a function in Python?",
+    "What is a decorator in Python?",
+    "What is the difference between a list and a tuple in Python?",
+    "Which command is used to print to the console in Python?",
+    "What is the naming convention in Python?",
+    "What is pip in Python?",
+    "What are the keywords to handle exceptions in Python?",
+    "What is pass in Python?",
+    "How to run the Python main function?",
+    "How to change an upper string to lowercase in python?",
+    "How to convert integer to string in python?",
+    "What is the data structure in Python that prevents duplication?",
   ];
-function calculateTotalScore(array){
-    updateQuestionsArrayLengthElement(array.length)
-    totalScoreBox.innerHTML = totalScore;
-    return (array.length)*10;
-}
+  let totalScore ;
+// fix it!!!
+
+    // updateQuestionsArrayLengthElement(array.length)
+    // totalScoreBox.innerHTML = totalScore;
+
 
 // let totalScore = calculateTotalScore(jsQuestionArray)
-let totalScore = 200
 
 //   options
+const mcqPythonArray = [
+    ["PEP 8", "pytonic", "It has no special name", "UPY"],//1
+    ["There is a built-in garbage collector", "The developer has to manage the memory itself", "There is a Reference Count mechanism built in Python", "There is both a reference count mechanism and a garbage collector built in Python"],//4
+    ["function func(){}", "def func():", "def func(){}", "function func():"],//2
+    ["A tool that allows programmers to alter the changes in the behavior of class or function", "A tool for developers to decorate their IDE", "GUI package in Python", "Nice documentation of the code"],//1 change the exact answer
+    ["List is mutable and tuple is immutable", "Tuple is mutable and list is immutable", "There is no diference", "List is only for integers and tuple is for all the types"],//1
+    ["console.log()", "Console.WriteLine()", "print()", "system.out.printLine()"],//3
+    ["paskal case", "snake case", "cammel case", "no convention"],//2
+    ["A package for logging in python", "A tool to enforce python's convention", "A package for error handeling in python", "The package installation manager in python"],//4
+    ["try, catch, finally", "try, catch, default", "try, except, default", "try, except, finally"],//4
+    ["A command that tells Python to override the current function", "Type of a variable", "A function to convert between types in Python", "speciall loop in python"],//1
+    ["main():", "if __name__ == '__main__':", "main.run():", "main(){}"],//2
+    ["string.lower()", "lower(string)", "string.to_lower()", "to_lower(string)"],//1
+    ["convert_to_int(string)", "parse_int(string)", "int(string)", "string.to_int()"],//3
+    ["array", "list", "tuple", "set"],//4
+];
+
 
 const mcqJSArray = [
     ["High Text Markup Language", "Hyperlink and Text Markup Language", "Hyper Transfer Markup Language", "Hyper Text Markup Language"],
@@ -141,28 +151,7 @@ const mcqJSArray = [
     ["setInterval()", "wait()", "delay()", "setTimeout()"],
     ["'undefined' and 'null' can be used interchangeably", "'undefined' is an intentional absence of value, while 'null' indicates a variable that has been declared but not assigned a value", "'null' is an intentional absence of value, while 'undefined' indicates a variable that has been declared but not assigned a value", "'null' is the same as 'undefined'"]
 ];
-const mcqPythonArray = [
-    ["High Text Markup Language", "Hyperlink and Text Markup Language", "Hyper Transfer Markup Language", "Hyper Text Markup Language"],
-    ["Boolean", "Alert", "Number", "String"],
-    ["Error", "4", "NaN", "22"],
-    ["int", "string", "variable", "var"],
-    ["addToEnd()", "concat()", "push()", "append()"],
-    ["Colorful Style Sheets", "Creative Style Sheets", "Cascading Style Sheets", "Computer Style Sheets"],
-    ["!==", "===", "==", "="],
-    ["Advanced Programming Interface", "Automated Programming Interface", "Application Protocol Interface", "Application Programming Interface"],
-    ["Declares a variable", "Enforces stricter parsing and error handling", "Defines a function", "Includes an external script"],
-    ["JSON.stringify()", "JSON.serialize()", "JSON.parse()", "JSON.decode()"],
-    ["Memory management", "DOM manipulation", "Creating objects", "Error handling"],
-    ["shift()", "remove()", "pop()", "delete()"],
-    ["Cancels the default behavior of an element", "Prevents the event from bubbling up the DOM tree", "Stops the event propagation", "Prevents the event from capturing"],
-    ["const", "let", "constant", "var"],
-    ["Handling errors", "Passing a function as an argument to another function", "Executing an asynchronous operation", "Passing data to another domain"],
-    ["parseInt()", "toInteger()", "convertToInt()", "stringToInt()"],
-    ["Compile, Run, Upload, Debug", "Update, Read, Create, Delete", "Control, Repeat, Undo, Draw", "Copy, Resize, Underline, Delete"],
-    ["It refers to the previous function's scope", "It refers to the current function's scope", "It refers to the parent element's scope", "It refers to the global scope"],
-    ["setInterval()", "wait()", "delay()", "setTimeout()"],
-    ["'undefined' and 'null' can be used interchangeably", "'undefined' is an intentional absence of value, while 'null' indicates a variable that has been declared but not assigned a value", "'null' is an intentional absence of value, while 'undefined' indicates a variable that has been declared but not assigned a value", "'null' is the same as 'undefined'"]
-];
+
 
 //   answer key
 const key = [3, 1, 0, 3, 2, 2, 1, 3, 1, 2, 0, 0, 2, 0, 1, 0, 1, 0, 3, 2];
@@ -240,6 +229,7 @@ function gameFunction() {
 }
 function toggleOptionPanelClickEvents()
 {
+    selectProgramingLanguage();
     //this prevent users from queueing the same timer multiple times by clickign on answers repeatedly
     optionPanelPointerEventEnabled = !optionPanelPointerEventEnabled;
     
@@ -248,30 +238,34 @@ function toggleOptionPanelClickEvents()
 
 // function will change questions and options
 function selectProgramingLanguage(){
+    //select aray of questions according to the player selection
     if (python){
         questionsArray =  pythonQuestionArray;
         answersArray = mcqPythonArray;
+        totalScore =  (pythonQuestionArray.length)*10;
+
     }
     else if (js){
         questionsArray =  jsQuestionArray;
         answersArray = mcqJSArray;
+        totalScore =  (jsQuestionArray.length)*10;
     }
 }
 function changeQuestion() {
+    selectProgramingLanguage();
     optionA.classList.remove("right-option", "wrong-option");
     optionB.classList.remove("right-option", "wrong-option");
     optionC.classList.remove("right-option", "wrong-option");
     optionD.classList.remove("right-option", "wrong-option");
     toggleOptionPanelClickEvents();
-    questionIndex = Math.floor(Math.random()*jsQuestionArray.length);
-    
+    questionIndex = Math.floor(Math.random()*questionsArray.length);
+    console.log(questionsArray);
     if(questionsAsked.length < questionsArray.length )
     {        
         while(questionsAsked.includes(questionIndex))
         {
             questionIndex = Math.floor(Math.random()*questionsArray.length);
         }
-        
         questionsAsked.push(questionIndex);
         updateQuestionsAskedElement(questionsAsked.length)
         question.innerHTML = questionsArray[questionIndex]; //change question text
@@ -285,7 +279,7 @@ function changeQuestion() {
         
         updateQuestionCountElement(questionCount);
         //this is what determines when the game is finished
-        if (questionCount > jsQuestionArray.length -1) showGameOverScreen(); 
+        if (questionCount > questionsArray.length -1) showGameOverScreen(); 
         calculateTheFinalScore();        
     }else{        
         updateQuestionsAskedElement(questionsAsked.length);
@@ -372,7 +366,6 @@ readInstructionBtn.addEventListener("click", () => {
 instExitBtn.addEventListener("click", () => {
     instructionPanel.style.display = "none";
 });
-
 gameFunction();
 
 
