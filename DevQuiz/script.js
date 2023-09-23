@@ -112,10 +112,10 @@ const jsQuestionArray = [
 
 //   options
 const mcqPythonArray = [
-    ["PEP 8", "pytonic", "It has no special name", "UPY"],//1
+    ["PEP 8", "pythonic", "It has no special name", "UPY"],//1
     ["There is a built-in garbage collector", "The developer has to manage the memory itself", "There is a Reference Count mechanism built in Python", "There is both a reference count mechanism and a garbage collector built in Python"],//4
     ["function func(){}", "def func():", "def func(){}", "function func():"],//2
-    ["A tool that allows programmers to alter the changes in the behavior of class or function", "A tool for developers to decorate their IDE", "GUI package in Python", "Nice documentation of the code"],//1 change the exact answer
+    ["A design pattern that allows programmers to alter the changes in the behavior of class or function", "A tool for developers to decorate their IDE", "GUI package in Python", "Nice documentation of the code"],//1 change the exact answer
     ["List is mutable and tuple is immutable", "Tuple is mutable and list is immutable", "There is no diference", "List is only for integers and tuple is for all the types"],//1
     ["console.log()", "Console.WriteLine()", "print()", "system.out.printLine()"],//3
     ["paskal case", "snake case", "cammel case", "no convention"],//2
